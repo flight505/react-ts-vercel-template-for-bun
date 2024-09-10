@@ -8,14 +8,14 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "react": "^20.0.0",
-    "react-dom": "^20.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.0.0",
     "next": "latest",
     "tailwindcss": "^3.0.0"
   },
   "devDependencies": {
-    "@types/react": "^20.0.0",
-    "@types/react-dom": "^20.0.0"
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10"
   }
 }
