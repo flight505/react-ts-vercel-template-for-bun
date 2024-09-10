@@ -1,61 +1,50 @@
-// this file is conditionally added/removed to next-env.d.ts
-// if the static image import handling is enabled
-
-declare module "*.png" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.png' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.svg" {
-  /**
-   * Use `any` to avoid conflicts with
-   * `@svgr/webpack` plugin or
-   * `babel-plugin-inline-react-svg` plugin.
-   */
-  const content: any;
+declare module '*.svg' {
+  import * as React from 'react';
 
-  export default content;
+  export const ReactComponent: React.FunctionComponent<React.SVGProps<
+    SVGSVGElement
+  > & { title?: string }>;
+
+  const src: string;
+  export default src;
 }
 
-declare module "*.jpg" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.jpg' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.jpeg" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.jpeg' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.gif" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.gif' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.webp" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.webp' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.avif" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.avif' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.ico" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.ico' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.bmp" {
-  const content: import("../dist/client/image").StaticImageData;
-
-  export default content;
+declare module '*.bmp' {
+  const src: string;
+  export default src;
 }

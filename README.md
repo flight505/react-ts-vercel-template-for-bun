@@ -1,29 +1,29 @@
-# Bun Latest React Template
+# Bun React TypeScript Tailwind Template
 
-This template uses the latest versions of React, TypeScript, Next.js, and Tailwind CSS, and is configured to work with Bun and Vercel for easy deployment.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. It uses the latest versions of React, TypeScript, and Tailwind CSS, and is configured to work with Bun for fast performance and Vercel for easy deployment.
 
 ## Features
 
-- React 20
+- React 18
 - TypeScript 5
-- Next.js (latest)
+- Vite 4
 - Tailwind CSS 3
 - Bun for fast JavaScript runtime
-- Vercel for deployment
+- Vercel-ready configuration
 
 ## Getting Started
 
 ### Prerequisites
 
 - [Bun](https://bun.sh/) installed globally
-- [Vercel CLI](https://vercel.com/download) installed globally
+- [Vercel CLI](https://vercel.com/download) (optional, for deployment)
 
 ### Setting Up a New Project
 
 1. **Clone the Template Repository**
 
    ```bash
-   git clone https://github.com/flight505/react-ts-vercel-template-for-bun.git your-new-project
+   git clone https://github.com/your-username/bun-react-typescript-tailwind-template.git your-new-project
    cd your-new-project
    ```
 
@@ -33,90 +33,84 @@ This template uses the latest versions of React, TypeScript, Next.js, and Tailwi
    bun install
    ```
 
-3. **Initialize a New Git Repository (Optional)**
-
-   If you want to start a new Git repository for your project:
-
-   ```bash
-   rm -rf .git
-   git init
-   git add .
-   git commit -m "Initial commit"
-   ```
-
-4. **Update Project Details**
-
-   Update the `package.json` file with your project's specific details, such as the name, version, and description.
-
-5. **Start the Development Server**
+3. **Start the Development Server**
 
    ```bash
    bun run dev
    ```
 
-   This command will start your Next.js development server. You can view your application in the browser at `http://localhost:3000`.
+   This command will start the Vite development server. You can view your application in the browser at `http://localhost:5173`.
+
+### Building for Production
+
+```bash
+bun run build
+```
+
+This command will create a production-ready build in the `dist` directory.
 
 ### Deploying to Vercel
 
-1. **Login to Vercel**
+1. **Install Vercel CLI** (if not already installed)
 
    ```bash
-   vercel login
+   npm i -g vercel
    ```
 
 2. **Deploy the Project**
 
    ```bash
-   bun run deploy
+   vercel
    ```
 
-   This command will deploy your project to Vercel. You can also use the `--prod` flag to deploy directly to production:
-
-   ```bash
-   vercel --prod
-   ```
+   Follow the prompts to deploy your project to Vercel.
 
 ## Project Structure
-```bash
+
+```
 .
+├── README.md
 ├── bun.lockb
+├── index.html
 ├── package.json
+├── postcss.config.js
 ├── public
-│   ├── index.html
-│   └── manifest.json
+│   └── favicon.ico
 ├── src
-│   ├── App.css
 │   ├── App.tsx
 │   ├── index.css
+│   ├── logo.svg
 │   └── main.tsx
 ├── tailwind.config.js
 ├── tsconfig.json
 ├── types
 │   └── images.d.ts
 └── vercel.json
-````
+```
 
 ### Important Files and Directories
 
 - **`src/`**: Contains the source code for your application.
   - **`App.tsx`**: The main application component.
   - **`main.tsx`**: The entry point for the React application.
-  - **`index.css`**: Global CSS styles.
-  - **`App.css`**: CSS styles specific to the `App` component.
-- **`public/`**: Contains static assets like the favicon and HTML template.
+  - **`index.css`**: Global CSS styles and Tailwind directives.
+- **`public/`**: Contains static assets that will be served directly.
+- **`index.html`**: The HTML template for your application.
 - **`package.json`**: Contains project metadata and scripts.
 - **`tsconfig.json`**: TypeScript configuration.
 - **`tailwind.config.js`**: Tailwind CSS configuration.
+- **`postcss.config.js`**: PostCSS configuration for Tailwind.
 - **`vercel.json`**: Vercel deployment configuration.
 - **`types/`**: Contains custom TypeScript type definitions.
 
-### Instructions to Get Started
+## Customizing the Template
 
-1. **Edit `src/App.tsx`**: Customize the main application component.
-2. **Edit `src/index.css` and `src/App.css`**: Add your global and component-specific styles.
-3. **Add Components**: Create new components in the `src/` directory as needed.
-4. **Update Static Assets**: Replace the files in the `public/` directory with your own static assets.
+1. Edit `src/App.tsx` to modify the main application component.
+2. Add your own components in the `src/` directory.
+3. Modify `src/index.css` for global styles and Tailwind customizations.
+4. Update `public/favicon.ico` with your own favicon.
+5. Adjust `tailwind.config.js` to customize your Tailwind setup.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is open source and available under the [MIT License](LICENSE).
