@@ -1,21 +1,21 @@
 {
-  "name": "myapp",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "dev": "bun run dev",
+    "build": "bun run build",
+    "start": "bun run start",
+    "deploy": "vercel --prod"
+  },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^20.0.0",
+    "react-dom": "^20.0.0",
+    "typescript": "^5.0.0",
+    "next": "latest",
+    "tailwindcss": "^3.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6"
-  },
-  "framework": {
-    "displayName": "React.js",
-    "static": "public"
+    "@types/react": "^20.0.0",
+    "@types/react-dom": "^20.0.0"
   }
 }
