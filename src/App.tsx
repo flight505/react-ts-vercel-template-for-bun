@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center justify-center p-4">
       <header className="text-center mb-8">
-        <img src={logo} alt="Logo" className="w-24 h-24 mx-auto mb-4 text-blue-500" />
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
           React + TypeScript + Bun + Vercel + Tailwind
         </h1>
